@@ -1,38 +1,140 @@
+:root {
+  --yellow: #f0ab00;
+  --blue: #008fd3;
+  --black: #191919;
+  --lightBlack: #313131;
+  --midBlack: #262626;
+  --purple: #a73cb3;
+  --orange: #e35500;
+  --green: #009688;
+  --ywigDarkGreen: #0f6b37;
+  --ywigOrange: #f09937;
+  --ywigPink: #f06f95;
+  --ywigRed: #ee4138;
+  --ywigBlue: #01cbfb;
+  --ywigGreen: #81ca4c;
+
+  --white: #eff1ef;
+  --gray: #939493;
+
+  --covidPink: #f04494;
+  --covidLime: #ccd038;
+  --covidGreen: #19d1b6;
+  --covidPurple: #6c43b1;
+  --covidBlue: #3292e1;
+  --covidOrange: #ff833d;
+  --covidYellow: #ccd038;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--black);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+  letter-spacing: 0.05rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  background: url(./img/camera.svg),
+    linear-gradient(60deg, var(--lightBlack), var(--lightBlack));
+  background-repeat: repeat;
+  background-size: 5rem;
+  position: relative;
+  background-color: rgba(239, 241, 239, 0.78);
+  position: relative;
+}
+
+main {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-gap: 2rem;
+  justify-items: center;
+}
+
+section {
+  display: grid;
+  padding: 2rem;
+  background: var(--white);
+}
+
+h2 {
+  color: var(--ywigDarkGreen);
+  font-weight: 900;
+}
+.PageWrap:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(239, 241, 239, 0.9);
+}
+.Main {
+  padding: 1rem;
+}
+
+body {
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 100px);
+}
+.Header {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  align-items: center;
+  align-content: center;
+  background: var(--white);
+}
+
+.Header h1 {
+  margin: 0;
+  text-align: center;
+  color: var(--ywigDarkGreen);
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2.5rem;
+  letter-spacing: -0.1rem;
+  margin-left: -3rem;
+}
+.Logos {
+  display: grid;
+  background: var(--white);
+  grid-template-columns: 1fr;
+  align-content: center;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-items: center;
+}
+.YwigWrap {
+  background: var(--white);
+  width: 100%;
+  display: grid;
+  padding: 1rem;
+  justify-items: center;
+}
+.CrinniuWrap {
+  background: var(--ywigDarkGreen);
+  width: 100%;
+  display: grid;
+  padding: 1rem;
+  justify-items: center;
+}
+.Ywig {
+  height: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.Crinniu {
+  height: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

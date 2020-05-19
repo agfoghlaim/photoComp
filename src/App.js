@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Comp from './components/Comp';
+import About from './components/About';
+import Terms from './components/Terms';
+import crinniu from './img/crinniu.svg';
+import ywig from './img/ywig.svg';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="Header">
+        <div className="Logos">
+          <div className="YwigWrap">
+            <img className="Ywig" src={ywig} />
+          </div>
+          <div className="CrinniuWrap">
+            <img className="Crinniu" src={crinniu} />
+          </div>
+        </div>
+        <h1>Photo Competition</h1>
       </header>
+      <main>
+        <About />
+        <Comp />
+        <Terms />
+      </main>
     </div>
   );
 }
